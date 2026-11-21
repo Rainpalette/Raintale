@@ -19,11 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE: The MIT license above covers the SOURCE CODE only. It does NOT cover:
-  - Official character artwork, mascot designs, logos, and voice models
-    — see ASSETS_LICENSE.md (these are NOT MIT-licensed).
-  - Bundled third-party components (e.g. sherpa-onnx, ML models)
-    — see THIRD_PARTY_LICENSES.md (each under its own license).
