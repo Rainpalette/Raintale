@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   自动备份规则（API 30 及以下）。
+   注意：本 app 在 AndroidManifest 里已设 android:allowBackup="false"，云备份整体关闭，
+   所以下面的规则当前不生效。保留作为「防御性安全网」——
+   若将来重新开启 allowBackup，含 BYOK API key 的 DataStore 仍不进备份。
+-->
+<full-backup-content>
+    <!-- DataStore（含 API key）排除出自动备份。 -->
+    <exclude domain="file" path="datastore/" />
+</full-backup-content>

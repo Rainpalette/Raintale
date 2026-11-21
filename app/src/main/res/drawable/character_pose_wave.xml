@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="180dp"
+    android:viewportWidth="120"
+    android:viewportHeight="180">
+
+    <!-- 抬起的手臂（挥手） -->
+    <path
+        android:strokeColor="#7E57C2"
+        android:strokeWidth="14"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M96,104 L112,56" />
+    <!-- 手 -->
+    <path
+        android:fillColor="#7E57C2"
+        android:pathData="M112,54 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0 Z" />
+
+    <!-- 身体 -->
+    <path
+        android:fillColor="#7E57C2"
+        android:pathData="M60,40 C88,40 100,62 100,95 L100,150 C100,165 86,172 60,172 C34,172 20,165 20,150 L20,95 C20,62 32,40 60,40 Z" />
+
+    <!-- 腮红 -->
+    <path
+        android:fillColor="#F48FB1"
+        android:fillAlpha="0.6"
+        android:pathData="M37,112 m-6,0 a6,4 0 1,0 12,0 a6,4 0 1,0 -12,0 Z" />
+    <path
+        android:fillColor="#F48FB1"
+        android:fillAlpha="0.6"
+        android:pathData="M83,112 m-6,0 a6,4 0 1,0 12,0 a6,4 0 1,0 -12,0 Z" />
+
+    <!-- 眼白 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,96 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M75,96 m-9,0 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" />
+    <!-- 瞳孔 -->
+    <path
+        android:fillColor="#2A2A2A"
+        android:pathData="M46,98 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 Z" />
+    <path
+        android:fillColor="#2A2A2A"
+        android:pathData="M76,98 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0 Z" />
+
+    <!-- 张嘴笑（挥手打招呼） -->
+    <path
+        android:fillColor="#2A2A2A"
+        android:pathData="M52,120 Q60,134 68,120 Q60,126 52,120 Z" />
+
+</vector>

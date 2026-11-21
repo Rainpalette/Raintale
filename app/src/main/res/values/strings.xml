@@ -1,0 +1,49 @@
+<resources>
+    <!--
+      ============================================================
+       PhotoBuddy 字符串资源（中文 · 默认 locale）
+      ============================================================
+      i18n 约定（详见 docs/i18n-guide.md）：
+      · 所有「给终端用户看的」UI 文案都放这里，代码用 stringResource(R.string.xxx) 引用。
+      · 命名规范：<屏幕/模块>_<元素>，全小写下划线。如 disclaimer_title、settings_about_title。
+      · 带变量的文案用占位符 %1$s（字符串）/ %1$d（数字），代码 stringResource(id, arg) 传入。
+      · 英文翻译放 values-en/strings.xml；缺某个 key 时自动回退到本文件（中文）。
+      · 不进这里：发给 AI 的 prompt（功能文本，见 ai/）、DebugLog 日志（开发者可见）。
+      · 增量迁移：新界面直接用 stringResource；旧界面按屏逐步搬进来，不必一次性全做。
+    -->
+
+    <!-- ===== 应用级 ===== -->
+    <string name="app_name">雨中逸事</string>
+
+    <!-- ===== 首次使用须知弹窗（AiDisclaimerDialog）· i18n 样板屏 ===== -->
+    <string name="disclaimer_title">使用前须知</string>
+    <!-- 文案有实质更新时：改这里 + 把 SettingsStore.NoticeVersions.AI_DISCLAIMER +1（所有用户会重新同意一次）。 -->
+    <string name="disclaimer_body">本应用的「AI 评论」会把你拍的照片上传到 AI 服务（Google Gemini，使用你自己的 API key）识别后生成一句话。\n\n请务必注意：\n· 使用 AI 功能需你已年满 18 岁，或达到你所在地区法定的成年 / 数字同意年龄。\n· 角色由 AI 生成，不是真人，不能替代专业的医疗、心理或法律帮助。\n· AI 的评论与识别可能不准确，仅供陪伴与娱乐参考，不构成事实陈述。\n· 若你的 API key 属于免费层，上传的内容可能会被 Google 用于训练模型（付费层默认不会）。\n· 不要拍摄涉及个人隐私、或未经他人同意的他人面孔的照片。\n· 上传的内容由你自行负责，由此引发的一切后果由你自行承担。\n· 若不同意上传，可「关闭 AI 评论并继续」（之后不再上传照片，仍可拍照），或退出应用。</string>
+    <string name="disclaimer_agree">我已知悉并同意</string>
+    <!-- %1$d = 倒计时剩余秒数。带格式参数的样板：代码用 stringResource(R.string.disclaimer_agree_countdown, remaining)。 -->
+    <string name="disclaimer_agree_countdown">我已知悉并同意（%1$d）</string>
+    <string name="disclaimer_disable_ai">关闭 AI 评论并继续</string>
+    <string name="disclaimer_exit">不同意，退出</string>
+
+    <!-- ===== 零收集数据告知（PrivacyNoticeDialog，首启一次；常驻版在 设置→隐私）===== -->
+    <!-- 文案有实质更新时：改这里 + 把 SettingsStore.NoticeVersions.PRIVACY +1。 -->
+    <string name="privacy_notice_title">数据与隐私</string>
+    <string name="privacy_notice_body">本应用不收集、也无法收集你的任何数据：\n· 开发者没有服务器——照片、影集批注、设置、API key 全部只存在你的手机里。\n· 无账号、无统计、无广告、无自动上传；系统云备份也已关闭。\n· 崩溃报告仅存本机，只在你手动分享时才会离开设备。\n\n当你启用相应功能时，数据只在「你的设备」与「你启用的第三方服务」之间直接传输，开发者不经手：\n· AI 评论 → Google Gemini（照片、留言，及开启后的时段 / 大致地点；用你自己的 key）\n· 知识链接 → 维基百科（识别出的地标 / 品牌名）\n· 位置信息 → 系统定位服务（换取大致地名）\n\n随时可在 设置 → 隐私 查看当前会外发什么；关闭对应功能即完全不联网。</string>
+    <string name="privacy_notice_confirm">我知道了</string>
+
+    <!-- ===== 实时点评首次使用须知（LiveScreen）===== -->
+    <!-- 文案有实质更新时：改这里 + 把 SettingsStore.NoticeVersions.LIVE +1。 -->
+    <string name="live_notice_title">实时点评须知</string>
+    <string name="live_notice_body">实时点评与单张拍照不同：开始后会按间隔持续自动上传相机画面给 AI（间隔可在 设置 → 实时点评 调整）。\n\n· 在公共场所使用时，请留意镜头里他人的隐私。\n· 停止点评即停止上传。\n\n此须知只显示一次。</string>
+    <string name="live_notice_confirm">知道了，开始</string>
+    <string name="live_notice_cancel">取消</string>
+
+    <!-- ===== 功能首次开启告知（SettingsScreen：知识链接 / 位置信息）===== -->
+    <!-- 文案有实质更新时：改这里 + 把 SettingsStore.NoticeVersions 对应版本 +1。 -->
+    <string name="knowledge_notice_title">开启知识链接</string>
+    <string name="knowledge_notice_body">开启后，AI 从照片里识别出的地标 / 品牌名会发给维基百科查询简介——这是 Google Gemini 之外的第二个数据接收方。\n\n只发送识别出的名称文字，不发送照片本身。可随时在此关闭。</string>
+    <string name="location_notice_title">开启位置信息</string>
+    <string name="location_notice_body">开启后：\n· 定位坐标会交给系统的地理编码服务（通常由 Google / 设备厂商提供）换算成大致地名（城市级，不含街道）。\n· 发给 Gemini 的只是这个大致地名，不是精确坐标。\n\n可随时在此关闭。</string>
+    <string name="notice_enable">开启</string>
+    <string name="notice_cancel">取消</string>
+</resources>

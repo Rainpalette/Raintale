@@ -1,0 +1,21 @@
+<resources>
+    <!--
+      ============================================================
+       PhotoBuddy string resources (English locale)
+      ============================================================
+      系统语言为英文时优先用本文件；此处缺失的 key 会自动回退到
+      values/strings.xml（中文默认）。
+
+      现状：英文翻译尚未开始（增量策略：先完成「去硬编码」，翻译作为独立一步）。
+      要加英文时，从 values/strings.xml 复制对应 <string> 到这里翻译即可；
+      占位符（%1$s / %1$d）必须原样保留、位置可随语序调整。
+
+      示例（翻译好后取消注释）：
+      <string name="disclaimer_title">Before You Start</string>
+      <string name="disclaimer_agree">I understand and agree</string>
+      <string name="disclaimer_agree_countdown">I understand and agree (%1$d)</string>
+    -->
+
+    <!-- 应用显示名：英文系统显示 Rain Tales（中文系统用默认「雨中逸事」）。 -->
+    <string name="app_name">Rain Tales</string>
+</resources>

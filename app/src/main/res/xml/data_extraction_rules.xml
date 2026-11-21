@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   备份/迁移规则（API 31+）。
+   注意：本 app 在 AndroidManifest 里已设 android:allowBackup="false"，云备份整体关闭，
+   所以下面的规则当前不生效。此处保留排除规则作为「防御性安全网」——
+   万一将来有人把 allowBackup 改回 true，含 BYOK API key 的 DataStore 仍不会进云备份。
+   （隐私政策承诺：Gemini API key 只存本机、不外发。）
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- DataStore（settings.preferences_pb）装着 API key + 设置，排除出云备份。 -->
+        <exclude domain="file" path="datastore/" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- 设备间直传（本地、非云）：同样排除 key 所在的 DataStore，保持一致。 -->
+        <exclude domain="file" path="datastore/" />
+    </device-transfer>
+</data-extraction-rules>
